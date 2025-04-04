@@ -1,0 +1,15 @@
+[book]
+authors = ["veynko"]
+language = "ru"
+description = "Ваши любимые лабы Вяткина Александра Игоревича"
+multilingual = false
+src = "src"
+title = "АЦУиОС"
+
+[build]
+create-missing = true
+
+[output.html]
+git-repository-url = "https://github.com/veynko/ADDOS"
+site-url = "/addos/"
+hash-files = true
