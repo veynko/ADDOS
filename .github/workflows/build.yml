@@ -1,0 +1,22 @@
+name: Build mdBook
+
+on:
+  push:
+    branches:
+      - main  # Измени, если твоя основная ветка называется иначе
+
+jobs:
+  build:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install mdBook
+        run: |
+          chmod +x scripts/install.sh
+          ./scripts/install.sh
+
+      - name: Build book
+        run: bin/mdbook build
